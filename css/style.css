@@ -464,6 +464,35 @@ body {
 }
 
 /* --- GENERAL --- */
+@supports ((-ms-scroll-snap-type: y mandatory) or (scroll-snap-type: y mandatory)) {
+  .scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+  }
+  .scroll-item {
+    scroll-snap-align: start;
+    overflow-y: hidden;
+  }
+}
+
+.scroll-item:not(:first-child) .csr-container {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 15vh, 0);
+          transform: translate3d(0, 15vh, 0);
+  -webkit-transition: opacity 1.1s, -webkit-transform 1.1s;
+  transition: opacity 1.1s, -webkit-transform 1.1s;
+  transition: opacity 1.1s, transform 1.1s;
+  transition: opacity 1.1s, transform 1.1s, -webkit-transform 1.1s;
+}
+
+.scroll-item:not(:first-child).is-visible .csr-container {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 .csr-wrapper,
 .csr-wrapper * {
   -webkit-box-sizing: border-box;
@@ -472,16 +501,16 @@ body {
 
 .csr-wrapper {
   width: 100vw;
-  height: 100%;
-  background: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+  background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   font-family: "Open Sans", sans;
 }
 
 .csr-container {
-  max-width: 1250px;
+  max-width: 1150px;
   margin: 0 auto;
   width: auto;
-  padding: 0 4vw !important;
+  padding-left: 4vw;
+  padding-right: 4vw;
   max-width: calc($contWidth - 8vw);
 }
 
@@ -507,7 +536,7 @@ body {
   padding: 40px 0;
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 87vh;
   padding-bottom: 4vh;
 }
 
@@ -515,13 +544,14 @@ body {
   max-width: 1200px;
   height: 100%;
   min-height: 50vh;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -533,24 +563,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-  }
-}
-
-.csr-header-container__part:nth-child(2) {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  max-width: 60vw;
-}
-
-@media (min-width: 768px) {
-  .csr-header-container__part:nth-child(2) {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    -webkit-box-flex: 25%;
-        -ms-flex: 25%;
-            flex: 25%;
   }
 }
 
@@ -572,9 +584,39 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-flex: 40%;
-        -ms-flex: 40%;
-            flex: 40%;
+  }
+}
+
+.csr-header-text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 2vh;
+}
+
+@media (min-width: 768px) {
+  .csr-header-text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+.csr-header-image-part {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  max-width: 60vw;
+}
+
+@media (min-width: 768px) {
+  .csr-header-image-part {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
   }
 }
 
@@ -602,16 +644,26 @@ body {
 
 .mouse {
   margin: 0 auto;
-  margin-top: 1vw;
+}
+
+.mouse-wrapper {
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2vh;
 }
 
 /* --- MID SECTION --- */
-.csr-mid {
-  min-height: 30vh;
+.csr-intro {
+  height: auto;
+  min-height: 80vh;
+  padding: 40px 0;
 }
 
 .csr-intro-description {
-  font-size: min(max(20px, 2vw), 22px);
+  font-size: min(max(18px, 1rem), 18px);
   font-weight: 400;
   color: #161616;
   color: white;
@@ -644,9 +696,9 @@ body {
 
 @media (min-width: 1025px) {
   .csr-contact {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
   }
 }
 
@@ -681,26 +733,30 @@ body {
   width: 97%;
   height: 95%;
   border-radius: 50%;
-  background: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+  background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .csr-contact-image-wrapper {
-  max-width: 130px;
-  width: 50%;
+  width: auto;
   position: relative;
 }
 
 .csr-contact-image {
   border-radius: 50%;
-  max-width: 130px;
-  width: 100%;
+  width: 120px;
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .csr-contact-image {
+    width: 140px;
+  }
+}
+
 .csr-contact-text {
-  width: 40%;
+  width: auto;
   margin-left: 23px;
 }
 
@@ -721,13 +777,13 @@ body {
   height: 1px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+  background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   -webkit-transition: 0.1s ease all;
   transition: 0.1s ease all;
 }
 
 .csr-contact-email:hover {
-  background: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+  background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -738,7 +794,7 @@ body {
 
 .csr-contact-function {
   margin: 0;
-  font-size: min(max(23px, 2vw), 20px);
+  font-size: min(max(18px, 2vw), 20px);
   font-weight: 400;
   color: #161616;
   padding-bottom: 5px;
@@ -746,7 +802,7 @@ body {
 
 .csr-contact-title {
   margin: 0;
-  font-size: min(max(23px, 4vw), 35px);
+  font-size: min(max(20px, 3vw), 35px);
   font-weight: 700;
   color: #161616;
   padding-bottom: 5px;
@@ -794,7 +850,7 @@ body {
 .csr-footer-container {
   height: 100%;
   min-height: 60vh;
-  padding: 40px 0;
+  padding: 0 4vw;
 }
 
 .csr-footer-title {

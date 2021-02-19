@@ -11,12 +11,12 @@
   <body>
     <link rel="stylesheet" href="css/style.css" />
     <script src="script.js"></script>
-    <div class="csr-wrapper">
+    <div class="csr-wrapper scroll-container">
       <!-- Header section -->
-      <div class="csr-header">
+      <section class="csr-header scroll-item">
         <div class="csr-container csr-header-container flex">
           <!-- Hero text -->
-          <div class="csr-header-container__part flex">
+          <div class="csr-header-container__part csr-header-text flex">
             <h1 class="csr-header-title">
               CSR Fair <span class="break"><br /></span>
               2021
@@ -24,32 +24,34 @@
             <h3 class="csr-header-subtitle">What's your story?</h3>
           </div>
           <!-- Hero image -->
-          <div class="csr-header-container__part">
+          <div class="csr-header-container__part csr-header-image-part">
             <img src="img/hero-img.png" alt="CSR Fair 2021 hero image" class="csr-header-image" />
           </div>
+          <!-- Scroll icon -->
+          <div class="mouse-wrapper">
+            <div class="mouse"></div>
+          </div>
         </div>
-        <!-- Scroll icon -->
-        <div class="mouse"></div>
-      </div>
+      </section>
       <div class="waves top-waves" style="overflow: hidden">
         <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: #000000; width: 100%; height: 6vw; min-height: 37px">
           <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
         </svg>
       </div>
       <!-- Mid section -->
-      <div class="csr-mid" id="csr-mid">
-        <div class="csr-container csr-intro">
+      <section class="csr-intro scroll-item">
+        <div class="csr-container csr-intro-container">
           <h2 class="csr-intro-title">Explore the organizations</h2>
           <p class="csr-intro-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum minima enim laudantium tempora earum similique illum culpa unde, tenetur eius sit? Vel architecto, nostrum sapiente amet obcaecati odio temporibus!</p>
         </div>
-      </div>
+      </section>
       <!-- Footer -->
       <div class="waves bottom-waves" style="overflow: hidden">
         <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" style="fill: #ffffff; width: 100%; height: 37px; transform: rotate(180deg)">
           <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
         </svg>
       </div>
-      <div class="csr-footer">
+      <section class="csr-footer scroll-item">
         <div class="csr-container csr-footer-container">
           <h2 class="csr-footer-title">Contact</h2>
           <div class="csr-contacts-wrapper flex">
@@ -73,7 +75,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

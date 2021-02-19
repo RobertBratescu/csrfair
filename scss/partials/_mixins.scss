@@ -4,7 +4,7 @@ $delGreen: #86bc25;
 $delBlue: #62b5e5;
 $lightGrey: #717171;
 $newBlack: #161616;
-$theGradient: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+$theGradient: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
 
 // MEDIA QUERIES
 $tablet: ">del-phone";
@@ -20,10 +20,10 @@ $extrabold: 800;
 $h1Font: #{"min(max(#{30px}, #{7vw}), #{70px})"};
 $h2Font: #{"min(max(#{23px}, #{6vw}), #{55px})"};
 $h3Font: #{"min(max(#{23px}, #{3vw}), #{30px})"};
-$h4Font: #{"min(max(#{23px}, #{4vw}), #{35px})"};
-$h5Font: #{"min(max(#{23px}, #{2vw}), #{20px})"};
+$h4Font: #{"min(max(#{20px}, #{3vw}), #{35px})"};
+$h5Font: #{"min(max(#{18px}, #{2vw}), #{20px})"};
 $mailFont: #{"min(max(#{20px}, #{2vw}), #{18px})"};
-$parFont: #{"min(max(#{20px}, #{2vw}), #{22px})"};
+$parFont: #{"min(max(#{18px}, #{1rem}), #{18px})"};
 
 @mixin h1-font {
   font-size: $h1Font;
