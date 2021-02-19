@@ -1,0 +1,248 @@
+@import "partials/include-media";
+@import "partials/mixins";
+@import "partials/mouse";
+
+$contWidth: 1250px;
+
+body {
+  //   height: 300vh;
+
+  @include media($tablet) {
+  }
+  @include media($wide) {
+  }
+  overflow-x: hidden;
+}
+
+/* --- GENERAL --- */
+.csr-wrapper,
+.csr-wrapper * {
+  box-sizing: border-box;
+}
+.csr-wrapper {
+  width: 100vw;
+  height: 100%;
+  background: $theGradient;
+  font-family: "Open Sans", sans;
+}
+.csr-container {
+  max-width: $contWidth;
+  margin: 0 auto;
+  width: auto;
+  padding: 0 4vw !important;
+  max-width: calc($contWidth - 8vw);
+}
+.flex {
+  display: flex;
+}
+.break {
+  display: none;
+  @include media($tablet) {
+    display: inline;
+  }
+}
+
+/* --- HEADER --- */
+
+.csr-header {
+  background-color: black;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 4vh;
+}
+.csr-header-container {
+  max-width: 1200px;
+  height: 100%;
+  min-height: 50vh;
+
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include media($tablet) {
+    flex-flow: row wrap;
+  }
+  &__part:nth-child(2) {
+    order: -1;
+    max-width: 60vw;
+    @include media($tablet) {
+      order: 0;
+      flex: 25%;
+    }
+  }
+  &__part {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @include media($tablet) {
+      align-items: flex-start;
+      flex: 40%;
+    }
+  }
+}
+.csr-header-image {
+  display: block;
+  width: 100%;
+}
+.csr-header-subtitle {
+  margin: 0;
+  margin-top: 1vw;
+  @include h3-font;
+}
+.csr-header-title {
+  margin: 0;
+  padding-top: 20px;
+  @include h1-font;
+}
+
+.mouse {
+  margin: 0 auto;
+  margin-top: 1vw;
+}
+
+/* --- MID SECTION --- */
+.csr-mid {
+  min-height: 30vh;
+}
+.csr-intro {
+}
+.csr-intro-description {
+  @include paragraph-font;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+.csr-intro-title {
+  @include h2-font;
+  color: white;
+  text-align: center;
+}
+.csr-mid {
+}
+
+/* --- FOOTER --- */
+.csr-contact {
+  flex: 1;
+  flex-flow: row nowrap;
+  align-items: center;
+  @include media($wide) {
+    flex: 50%;
+  }
+  &:nth-child(2) {
+    margin-top: 5vh;
+    @include media($wide) {
+      margin-top: 0;
+    }
+  }
+  //   &:hover .csr-contact-image-wrapper:before {
+  //     transform: scale(1.2);
+  //     width: 100%;
+  //     height: 96%;
+  //   }
+}
+.csr-contact + .csr-contact {
+  @include media($wide) {
+    margin-left: 2vw;
+  }
+}
+
+.csr-contact-image-wrapper.hovered:before {
+  transform: scale(1.2);
+  width: 100%;
+  height: 96%;
+}
+.csr-contact-image-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 95%;
+  border-radius: 50%;
+  background: $theGradient;
+  transition: 0.3s ease;
+}
+.csr-contact-image-wrapper {
+  max-width: 130px;
+  width: 50%;
+  position: relative;
+}
+.csr-contact-image {
+  border-radius: 50%;
+  max-width: 130px;
+  width: 100%;
+  position: relative;
+}
+.csr-contact-text {
+  width: 40%;
+  margin-left: 23px;
+}
+.csr-contact-email {
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  @include a-contact-font;
+  &:before {
+    width: 0;
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: $theGradient;
+    transition: 0.1s ease all;
+  }
+  &:hover {
+    background: $theGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover:before {
+    width: 100%;
+  }
+}
+.csr-contact-function {
+  margin: 0;
+  @include h5-font;
+  padding-bottom: 5px;
+}
+.csr-contact-title {
+  margin: 0;
+  @include h4-font;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+.csr-contacts-wrapper {
+  flex-flow: column wrap;
+  align-items: center;
+  @include media($wide) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.bottom-waves {
+  margin-bottom: -5px;
+}
+.csr-footer {
+  background-color: white;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 4vh;
+}
+.csr-footer-container {
+  height: 100%;
+  min-height: 60vh;
+  padding: 40px 0;
+}
+.csr-footer-title {
+  margin: 0;
+  @include h2-font;
+  text-align: center;
+  padding-bottom: 5vw;
+}

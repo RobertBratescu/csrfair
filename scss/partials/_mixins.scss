@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
+// COLORS
+$delGreen: #86bc25;
+$delBlue: #62b5e5;
+$lightGrey: #717171;
+$newBlack: #161616;
+$theGradient: linear-gradient(115.58deg, #86bc25 -8.64%, #62b5e5 104.84%);
+
+// MEDIA QUERIES
+$tablet: ">del-phone";
+$wide: ">del-tablet";
+
+// FONTS
+$font: "Open Sans", sans;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$extrabold: 800;
+
+$h1Font: #{"min(max(#{30px}, #{7vw}), #{70px})"};
+$h2Font: #{"min(max(#{23px}, #{6vw}), #{55px})"};
+$h3Font: #{"min(max(#{23px}, #{3vw}), #{30px})"};
+$h4Font: #{"min(max(#{23px}, #{4vw}), #{35px})"};
+$h5Font: #{"min(max(#{23px}, #{2vw}), #{20px})"};
+$mailFont: #{"min(max(#{20px}, #{2vw}), #{18px})"};
+$parFont: #{"min(max(#{20px}, #{2vw}), #{22px})"};
+
+@mixin h1-font {
+  font-size: $h1Font;
+  font-weight: $extrabold;
+  color: $delGreen;
+  line-height: 1;
+}
+@mixin h2-font {
+  font-size: $h2Font;
+  font-weight: $bold;
+  color: $newBlack;
+}
+@mixin h3-font {
+  font-size: $h3Font;
+  font-weight: $regular;
+  color: $lightGrey;
+}
+@mixin h4-font {
+  font-size: $h4Font;
+  font-weight: $bold;
+  color: $newBlack;
+}
+@mixin h5-font {
+  font-size: $h5Font;
+  font-weight: $regular;
+  color: $newBlack;
+}
+@mixin a-contact-font {
+  font-size: $mailFont;
+  font-weight: $regular;
+  font-style: italic;
+  color: $lightGrey;
+}
+@mixin paragraph-font {
+  font-size: $parFont;
+  font-weight: $regular;
+  color: $newBlack;
+}
