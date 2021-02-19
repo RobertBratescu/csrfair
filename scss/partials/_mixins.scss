@@ -19,11 +19,13 @@ $extrabold: 800;
 
 $h1Font: #{"min(max(#{30px}, #{7vw}), #{70px})"};
 $h2Font: #{"min(max(#{23px}, #{6vw}), #{55px})"};
-$h3Font: #{"min(max(#{23px}, #{3vw}), #{30px})"};
+$h3Font: #{"min(max(#{23px}, #{4vw}), #{40px})"};
 $h4Font: #{"min(max(#{20px}, #{3vw}), #{35px})"};
 $h5Font: #{"min(max(#{18px}, #{2vw}), #{20px})"};
 $mailFont: #{"min(max(#{20px}, #{2vw}), #{18px})"};
 $parFont: #{"min(max(#{18px}, #{1rem}), #{18px})"};
+
+$card-title-font: #{"min(max(#{21px}, #{4vw}), #{32px})"};
 
 @mixin h1-font {
   font-size: $h1Font;
@@ -61,4 +63,47 @@ $parFont: #{"min(max(#{18px}, #{1rem}), #{18px})"};
   font-size: $parFont;
   font-weight: $regular;
   color: $newBlack;
+}
+
+// CARDS
+$button-radius: 42px;
+$button-back-color: rgba(255, 255, 255, 0.35);
+@mixin card {
+  background: rgba(255, 255, 255, 0.4);
+}
+@mixin before-card {
+  background: rgba(255, 255, 255, 0.17);
+}
+@mixin card-button {
+  margin-top: 15px;
+  padding: 4px 30px;
+  background-color: $button-back-color;
+  border-radius: $button-radius;
+  position: relative;
+  border: 4px solid transparent;
+}
+@mixin card-button-span {
+  font-size: $h5Font;
+  font-weight: bold;
+  color: white;
+}
+@mixin card-button-hover {
+  background-color: white;
+}
+@mixin card-button-span-hover {
+  background: $theGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin card-button-hover-before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  border-radius: $button-radius;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background: $theGradient;
+  z-index: -1;
 }
