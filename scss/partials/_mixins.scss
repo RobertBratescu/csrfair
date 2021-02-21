@@ -7,117 +7,131 @@ $newBlack: #161616;
 $theGradient: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
 
 // MEDIA QUERIES
-$tablet: ">del-phone";
-$wide: ">del-tablet";
+$tablet: '>del-phone';
+$wide: '>del-tablet';
 
 // FONTS
-$font: "Open Sans", sans;
+$font: 'Open Sans', sans;
 $light: 300;
 $regular: 400;
 $bold: 700;
 $extrabold: 800;
 
-$h1Font: #{"min(max(#{30px}, #{7vw}), #{70px})"};
-$h2Font: #{"min(max(#{23px}, #{6vw}), #{55px})"};
-$h3Font: #{"min(max(#{23px}, #{4vw}), #{40px})"};
-$h4Font: #{"min(max(#{20px}, #{3vw}), #{35px})"};
-$h5Font: #{"min(max(#{18px}, #{2vw}), #{20px})"};
-$mailFont: #{"min(max(#{20px}, #{2vw}), #{18px})"};
-$parFont: #{"min(max(#{18px}, #{1rem}), #{18px})"};
+$h1Font: #{'min(max(#{30px}, #{7vw}), #{70px})'};
+$h2Font: #{'min(max(#{23px}, #{6vw}), #{55px})'};
+$h3Font: #{'min(max(#{23px}, #{4vw}), #{40px})'};
+$h4Font: #{'min(max(#{20px}, #{3vw}), #{35px})'};
+$h5Font: #{'min(max(#{18px}, #{2vw}), #{20px})'};
+$mailFont: #{'min(max(#{20px}, #{2vw}), #{18px})'};
+$parFont: #{'min(max(#{18px}, #{1rem}), #{18px})'};
 
-$card-title-font: #{"min(max(#{21px}, #{4vw}), #{32px})"};
+$card-title-font: #{'min(max(#{21px}, #{4vw}), #{32px})'};
 
 @mixin h1-font {
-  font-size: $h1Font;
-  font-weight: $extrabold;
-  color: $delGreen;
-  line-height: 1;
+	font-size: $h1Font;
+	font-weight: $extrabold;
+	color: $delGreen;
+	line-height: 1;
 }
 @mixin h2-font {
-  font-size: $h2Font;
-  font-weight: $bold;
-  color: $newBlack;
+	font-size: $h2Font;
+	font-weight: $bold;
+	color: $newBlack;
 }
 @mixin h3-font {
-  font-size: $h3Font;
-  font-weight: $regular;
-  color: $lightGrey;
+	font-size: $h3Font;
+	font-weight: $regular;
+	color: $lightGrey;
 }
 @mixin h4-font {
-  font-size: $h4Font;
-  font-weight: $bold;
-  color: $newBlack;
+	font-size: $h4Font;
+	font-weight: $bold;
+	color: $newBlack;
 }
 @mixin h5-font {
-  font-size: $h5Font;
-  font-weight: $regular;
-  color: $newBlack;
+	font-size: $h5Font;
+	font-weight: $regular;
+	color: $newBlack;
 }
 @mixin a-contact-font {
-  font-size: $mailFont;
-  font-weight: $regular;
-  font-style: italic;
-  color: $lightGrey;
+	font-size: $mailFont;
+	font-weight: $regular;
+	font-style: italic;
+	color: $lightGrey;
 }
 @mixin paragraph-font {
-  font-size: $parFont;
-  font-weight: $regular;
-  color: $newBlack;
+	font-size: $parFont;
+	font-weight: $regular;
+	color: $newBlack;
 }
 
 // CARDS
 $button-radius: 42px;
 $button-back-color: rgba(255, 255, 255, 0.35);
 @mixin card {
-  background: rgba(255, 255, 255, 0.4);
+	background: rgba(255, 255, 255, 0.4);
 }
 @mixin before-card {
-  background: rgba(255, 255, 255, 0.17);
+	background: rgba(255, 255, 255, 0.17);
 }
 @mixin card-button {
-  margin-top: 15px;
-  padding: 4px 30px;
-  background-color: $button-back-color;
-  border-radius: $button-radius;
-  position: relative;
-  border: 4px solid transparent;
+	text-decoration: none;
+	margin-top: 15px;
+	padding: 4px 30px;
+	background-color: $button-back-color;
+	border-radius: $button-radius;
+	position: relative;
+	border: 4px solid transparent;
 }
 @mixin card-button-span {
-  font-size: $h5Font;
-  font-weight: bold;
-  color: white;
+	font-size: $h5Font;
+	font-weight: bold;
+	color: white;
 }
 @mixin card-button-hover {
-  background-color: white;
+	background-color: white;
+	cursor: pointer;
 }
 @mixin card-button-span-hover {
-  background: $theGradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: $theGradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin card-button-hover-before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  border-radius: $button-radius;
-  width: calc(100% + 16px);
-  height: calc(100% + 16px);
-  background: $theGradient;
-  z-index: -1;
-}
-
-@mixin card-skew {
-  transform: rotate3d(0, 0, 0, 0deg) rotate(0deg);
-  transition: all 0.4s ease;
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	border-radius: $button-radius;
+	width: calc(100% + 16px);
+	height: calc(100% + 16px);
+	background: $theGradient;
+	z-index: -1;
 }
 
 @mixin card-skew-hover {
-  transform: rotate3d(0.1, -0.9, 0, 11deg) rotate(0.5deg);
-  box-shadow: 2em 3em 6em -2em rgba(0, 0, 0, 0.2), 5em 3em 1.5em -3.5em rgba(0, 0, 0, 0.25);
+	transform: rotate3d(0.1, -0.9, 0, 11deg) rotate(0.5deg);
+	box-shadow: 2em 3em 6em -2em rgba(0, 0, 0, 0.2), 5em 3em 1.5em -3.5em rgba(0, 0, 0, 0.25);
 }
-@mixin image-skew-hover {
-  transform: rotate3d(-0.5, -0.9, 0, 18deg) rotate(1deg);
-  box-shadow: 6px -3px 11px 0px rgba(0, 0, 0, 0.23), -1px 1px 2px 0px rgba(0, 0, 0, 0.08);
+@mixin alt-card-skew-hover {
+	transform: translateY(-1vh);
+	box-shadow: -5px 10px 9px 0px rgba(0, 0, 0, 0.05), 5px 10px 9px 2px rgba(0, 0, 0, 0.05);
+}
+@mixin cancel-card-skew-hover {
+	transform: translateY(0);
+	box-shadow: none;
+}
+
+@mixin card-open {
+	flex: 100%;
+	order: -1;
+	margin-left: 0;
+	height: 60vh;
+	// margin-bottom: 1vw;
+}
+@mixin card-open-siblings {
+	flex: 1;
+	margin-left: 0;
+	height: 20vh;
 }
