@@ -526,7 +526,7 @@ body {
 }
 
 .return-button .span-wrapper span:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 35px;
   height: 8px;
@@ -579,7 +579,7 @@ body {
   position: relative;
   background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   overflow: hidden;
-  font-family: "Open Sans", sans;
+  font-family: 'Open Sans', sans;
 }
 
 .csr-container {
@@ -808,12 +808,15 @@ body {
   line-height: 1.5;
   margin-bottom: 5vh;
   max-height: 50vh;
-  -webkit-transition: max-height 3s ease, opacity 0.3s ease-in;
-  transition: max-height 3s ease, opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease-in;
+  transition: transform 0.3s ease, opacity 0.3s ease-in, -webkit-transform 0.3s ease;
 }
 
 .csr-intro-description.go-up {
-  max-height: 0;
+  -webkit-transform: translateY(-25vh);
+          transform: translateY(-25vh);
   opacity: 0;
 }
 
@@ -825,12 +828,15 @@ body {
   text-align: center;
   margin-top: 0;
   max-height: 50vh;
-  -webkit-transition: max-height 3s ease, opacity 0.3s ease-in;
-  transition: max-height 3s ease, opacity 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease-in;
+  transition: transform 0.3s ease, opacity 0.3s ease-in, -webkit-transform 0.3s ease;
 }
 
 .csr-intro-title.go-up {
-  max-height: 0;
+  -webkit-transform: translateY(-25vh);
+          transform: translateY(-25vh);
   opacity: 0;
 }
 
@@ -862,7 +868,7 @@ body {
 }
 
 .card:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 200%;
   height: 60%;
@@ -1007,7 +1013,7 @@ body {
 }
 
 .card .card-projects:before {
-  content: "";
+  content: '';
   width: 90%;
   height: 2px;
   background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
@@ -1070,7 +1076,7 @@ body {
 }
 
 .card .card-projects .csr-project .project-title .project-title-text:before {
-  content: "Project";
+  content: 'Project';
   display: block;
   position: absolute;
   top: -22px;
@@ -1103,7 +1109,7 @@ body {
 }
 
 .card .card-projects .csr-project .project-arrow span:after {
-  content: "";
+  content: '';
   width: 25px;
   height: 6px;
   position: absolute;
@@ -1379,6 +1385,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.csr-cards-wrapper.go-up {
+  -webkit-transform: translateY(-25vh);
+          transform: translateY(-25vh);
 }
 
 @media (min-width: 1025px) {
@@ -1475,7 +1490,7 @@ body {
 }
 
 .csr-contact-image-wrapper:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1521,7 +1536,7 @@ body {
 
 .csr-contact-email:before {
   width: 0;
-  content: "";
+  content: '';
   position: absolute;
   height: 1px;
   bottom: 0;
