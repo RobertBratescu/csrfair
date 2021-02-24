@@ -24,7 +24,7 @@ $h3Font: #{"min(max(#{23px}, #{4vw}), #{40px})"};
 $h4Font: #{"min(max(#{20px}, #{3vw}), #{32px})"};
 $h5Font: #{"min(max(#{18px}, #{2vw}), #{19px})"};
 $mailFont: #{"min(max(#{20px}, #{2vw}), #{15px})"};
-$parFont: #{"min(max(#{10px}, #{1vw}), #{15px})"};
+$parFont: #{"min(max(#{15px}, #{1vw}), #{15px})"};
 
 $card-title-font: #{"min(max(#{19px}, #{3vw}), #{30px})"};
 
@@ -140,7 +140,10 @@ $button-back-color: rgba(255, 255, 255, 0.35);
 //Projects
 
 @mixin project11-background {
-  background-image: url(/img/people.png);
+  background-image: url(/img/leadership.png);
+}
+@mixin project12-background {
+  background-image: url(/img/edu.png);
 }
 
 //JOIN BUTTON
@@ -151,7 +154,7 @@ $button-back-color: rgba(255, 255, 255, 0.35);
   margin: 0 auto;
   padding: 2vw 4vw;
   text-align: center;
-  background-color: $delGreen;
+  background: $delGreen;
   border-radius: 10px;
   position: relative;
   border: 4px solid transparent;
@@ -162,7 +165,7 @@ $button-back-color: rgba(255, 255, 255, 0.35);
   color: white;
 }
 @mixin join-button-hover {
-  background-color: white;
+  background: white;
   cursor: pointer;
 }
 @mixin join-button-span-hover {

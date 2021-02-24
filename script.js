@@ -66,7 +66,7 @@ $(document).ready(function () {
   $(".csr-project").click(function () {
     $(".csr-project").removeClass("clicked");
     $(this).addClass("clicked");
-    $(".csr-intro").addClass("has-left");
+    $(".csr-intro").addClass("has-left hide");
     // Get the data
     var getData = $(this).attr("data-tab");
 
@@ -101,7 +101,7 @@ $(document).ready(function () {
 
   //   CLICK RETURN
   $(".return-button").click(function () {
-    $(".csr-intro").removeClass("has-left");
+    $(".csr-intro").removeClass("has-left hide");
     $(".csr-projects-section").removeClass("has-left");
     $(".return-button").addClass("go-down");
     $(".csr-project").removeClass("clicked");
@@ -115,5 +115,12 @@ $(document).ready(function () {
       },
       600
     );
+  });
+
+  //PROJECT PAGE TITLE
+  $(".project-page-title").each(function () {
+    var getData = $(this).parent().parent().attr("data-tab");
+    var getProjectName = $(".csr-project[data-tab='" + getData + "'] .project-title-text").html();
+    $(this).html(getProjectName);
   });
 });
