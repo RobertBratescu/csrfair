@@ -527,7 +527,7 @@ body {
 }
 
 .return-button .span-wrapper span:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 35px;
   height: 8px;
@@ -602,7 +602,7 @@ body {
   position: relative;
   background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
   overflow: hidden;
-  font-family: "Open Sans", sans;
+  font-family: 'Open Sans', sans;
 }
 
 .csr-container {
@@ -723,6 +723,8 @@ body {
   display: block;
   width: 85%;
   margin: 0 auto;
+  -webkit-transform: rotate(-136deg);
+          transform: rotate(-136deg);
 }
 
 @media (min-width: 768px) {
@@ -977,7 +979,7 @@ body {
 }
 
 .card:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 200%;
   height: 60%;
@@ -1190,7 +1192,7 @@ body {
 }
 
 .card .card-projects:before {
-  content: "";
+  content: '';
   width: 90%;
   height: 2px;
   background: linear-gradient(123.71deg, #86bc25 -1.89%, #62b5e5 95.71%);
@@ -1256,7 +1258,7 @@ body {
 }
 
 .card .card-projects .csr-project .project-title .project-title-text:before {
-  content: "Get involved";
+  content: 'Get involved';
   display: block;
   position: absolute;
   top: -22px;
@@ -1298,7 +1300,7 @@ body {
 }
 
 .card .card-projects .csr-project .project-arrow span:after {
-  content: "";
+  content: '';
   width: 25px;
   height: 6px;
   position: absolute;
@@ -1393,7 +1395,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "A B B B B D D D D D" "C C C C C D D D D D" "C C C C C D D D D D" "C C C C C D D D D D";
+        grid-template-areas: 'A B B B B D D D D D' 'C C C C C D D D D D' 'C C C C C D D D D D' 'C C C C C D D D D D';
     gap: 1vw;
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -1500,8 +1502,8 @@ body {
     line-height: 1.1;
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
-    -webkit-transform: translateY(1.2vw);
-            transform: translateY(1.2vw);
+    -webkit-transform: translateY(2vw);
+            transform: translateY(2vw);
   }
   .card.open .card-projects .csr-project .project-arrow {
     margin-left: 0;
@@ -2074,67 +2076,67 @@ body {
   }
 }
 
-.project-page[data-tab="project11"] .project-hero-image {
+.project-page[data-tab='project11'] .project-hero-image {
   background-image: url(../img/leadership.png);
 }
 
-.project-page[data-tab="project12"] .project-hero-image {
+.project-page[data-tab='project12'] .project-hero-image {
   background-image: url(../img/edu.png);
 }
 
-.project-page[data-tab="project21"] .project-hero-image {
+.project-page[data-tab='project21'] .project-hero-image {
   background-image: url(../img/crowd.png);
 }
 
-.project-page[data-tab="project22"] .project-hero-image {
+.project-page[data-tab='project22'] .project-hero-image {
   background-image: url(../img/partnership.png);
 }
 
-.project-page[data-tab="project23"] .project-hero-image {
+.project-page[data-tab='project23'] .project-hero-image {
   background-image: url(../img/edu-map.png);
 }
 
-.project-page[data-tab="project31"] .project-hero-image {
+.project-page[data-tab='project31'] .project-hero-image {
   background-image: url(../img/learn.png);
 }
 
-.project-page[data-tab="project32"] .project-hero-image {
+.project-page[data-tab='project32'] .project-hero-image {
   background-image: url(../img/brighter.png);
 }
 
-.project-page[data-tab="project33"] .project-hero-image {
+.project-page[data-tab='project33'] .project-hero-image {
   background-image: url(../img/reliance.png);
 }
 
-.csr-project[data-tab="project11"] {
+.csr-project[data-tab='project11'] {
   background-image: url(../img/leadership.png);
 }
 
-.csr-project[data-tab="project12"] {
+.csr-project[data-tab='project12'] {
   background-image: url(../img/edu.png);
 }
 
-.csr-project[data-tab="project21"] {
+.csr-project[data-tab='project21'] {
   background-image: url(../img/crowd.png);
 }
 
-.csr-project[data-tab="project22"] {
+.csr-project[data-tab='project22'] {
   background-image: url(../img/partnership.png);
 }
 
-.csr-project[data-tab="project23"] {
+.csr-project[data-tab='project23'] {
   background-image: url(../img/edu-map.png);
 }
 
-.csr-project[data-tab="project31"] {
+.csr-project[data-tab='project31'] {
   background-image: url(../img/learn.png);
 }
 
-.csr-project[data-tab="project32"] {
+.csr-project[data-tab='project32'] {
   background-image: url(../img/brighter.png);
 }
 
-.csr-project[data-tab="project33"] {
+.csr-project[data-tab='project33'] {
   background-image: url(../img/reliance.png);
 }
 
@@ -2184,7 +2186,7 @@ body {
 }
 
 .csr-contact-image-wrapper:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -2238,7 +2240,7 @@ body {
 
 .csr-contact-email:before {
   width: 0;
-  content: "";
+  content: '';
   position: absolute;
   height: 1px;
   bottom: 0;
