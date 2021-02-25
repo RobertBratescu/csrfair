@@ -48,7 +48,7 @@ $(document).ready(function () {
     if ($(window).width() > 1024) {
       $([document.documentElement, document.body]).animate(
         {
-          scrollTop: $(".csr-mid").offset().top - 100,
+          scrollTop: $(".csr-mid").offset().top - 60,
         },
         900
       );

@@ -479,7 +479,7 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         & a {
-          flex-basis: 10%;
+          flex-basis: 8%;
           margin-left: 2%;
           transition: all 0.3s ease;
           &:hover {
@@ -680,7 +680,7 @@ body {
       flex: 100%;
       order: -1;
       margin-left: 0;
-      height: 60vh;
+      height: 70vh;
       padding: 2vw;
       box-sizing: content-box;
       display: grid;
@@ -694,7 +694,7 @@ body {
       gap: 1vw;
       .csr-card-logo-image {
         grid-area: A;
-        width: 6vw;
+        width: 100%;
       }
       .csr-card-text-wrap {
         grid-area: B;
@@ -713,7 +713,7 @@ body {
         align-self: flex-start;
         & .description-wrapper {
           padding-right: 20px;
-          max-height: 40.5vh;
+          max-height: 48vh;
         }
         & p {
           margin-bottom: 20px;
@@ -732,23 +732,24 @@ body {
         align-content: flex-end;
         & .csr-project {
           margin: 0;
-          height: 24vh;
+          height: 33vh;
           background-position-x: 50%;
           flex-flow: column nowrap;
           justify-content: flex-end;
           transition: transform 0.4s ease;
           & .project-title {
             opacity: 0.95;
-            flex-basis: 40%;
+            flex-basis: 50%;
             clip-path: none;
             padding: 1vw;
             border-radius: 0 0 8px 8px;
             align-items: flex-start;
           }
           & .project-title-text {
-            font-size: $parFont;
+            font-size: #{"min(max(#{15px}, #{2vw}), #{19px})"};
+            line-height: 1.1;
             flex-basis: 70%;
-            transform: translateY(0.8vw);
+            transform: translateY(1.2vw);
             // font-weight: $regular;
             &:before {
               //   font-weight: $regular;
@@ -973,8 +974,8 @@ body {
   padding: 5vw;
   @include media($wide) {
     flex-basis: 60%;
-    padding: 2vw;
-    padding-right: 2.5vw;
+    padding: 4vw;
+    // padding-right: 2.5vw;
   }
   & .first-par {
     margin-top: 3em;
@@ -1089,7 +1090,7 @@ body {
   background-position: center;
   background-size: cover;
   @include media($wide) {
-    min-height: 40vh;
+    min-height: 50vh;
     height: auto;
     flex-basis: 100%;
   }
@@ -1205,6 +1206,7 @@ body {
   border-radius: 50%;
   background: $theGradient;
   transition: 0.3s ease;
+  transform: translate(1px, 1px);
 }
 .csr-contact-image-wrapper {
   //   max-width: 130px;

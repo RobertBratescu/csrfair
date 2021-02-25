@@ -135,7 +135,9 @@ $button-back-color: rgba(255, 255, 255, 0.35);
   flex: 1;
   margin-left: 0;
   height: 20vh;
-  max-width: calc(50% - 0.4vw);
+  // max-width: calc(50% - 0.4vw);
+  max-width: calc(50% - 4.4vw);
+  box-sizing: content-box;
 }
 
 //Projects
