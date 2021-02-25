@@ -2056,43 +2056,43 @@ body {
 }
 
 .project-page[data-tab="project11"] .project-hero-image {
-  background-image: url(/img/leadership.png);
+  background-image: url(../img/leadership.png);
 }
 
 .project-page[data-tab="project12"] .project-hero-image {
-  background-image: url(/img/edu.png);
+  background-image: url(../img/edu.png);
 }
 
 .project-page[data-tab="project21"] .project-hero-image {
-  background-image: url(/img/crowd.png);
+  background-image: url(../img/crowd.png);
 }
 
 .project-page[data-tab="project22"] .project-hero-image {
-  background-image: url(/img/partnership.png);
+  background-image: url(../img/partnership.png);
 }
 
 .project-page[data-tab="project23"] .project-hero-image {
-  background-image: url(/img/edu-map.png);
+  background-image: url(../img/edu-map.png);
 }
 
 .csr-project[data-tab="project11"] {
-  background-image: url(/img/leadership.png);
+  background-image: url(../img/leadership.png);
 }
 
 .csr-project[data-tab="project12"] {
-  background-image: url(/img/edu.png);
+  background-image: url(../img/edu.png);
 }
 
 .csr-project[data-tab="project21"] {
-  background-image: url(/img/crowd.png);
+  background-image: url(../img/crowd.png);
 }
 
 .csr-project[data-tab="project22"] {
-  background-image: url(/img/partnership.png);
+  background-image: url(../img/partnership.png);
 }
 
 .csr-project[data-tab="project23"] {
-  background-image: url(/img/edu-map.png);
+  background-image: url(../img/edu-map.png);
 }
 
 /* --- FOOTER --- */

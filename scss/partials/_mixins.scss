@@ -141,19 +141,19 @@ $button-back-color: rgba(255, 255, 255, 0.35);
 //Projects
 
 @mixin project11-background {
-  background-image: url(/img/leadership.png);
+  background-image: url(../img/leadership.png);
 }
 @mixin project12-background {
-  background-image: url(/img/edu.png);
+  background-image: url(../img/edu.png);
 }
 @mixin project21-background {
-  background-image: url(/img/crowd.png);
+  background-image: url(../img/crowd.png);
 }
 @mixin project22-background {
-  background-image: url(/img/partnership.png);
+  background-image: url(../img/partnership.png);
 }
 @mixin project23-background {
-  background-image: url(/img/edu-map.png);
+  background-image: url(../img/edu-map.png);
 }
 
 //JOIN BUTTON
