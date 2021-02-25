@@ -557,7 +557,9 @@ body {
       //     border-radius: 10px;
       //     backdrop-filter: blur(2px);
       //   }
-
+      &.filtered {
+        filter: grayscale(1);
+      }
       & .project-title {
         flex-flow: row nowrap;
         // justify-content: center;
@@ -578,7 +580,7 @@ body {
           position: relative;
 
           &:before {
-            content: "Project";
+            content: "Get involved";
             display: block;
             position: absolute;
             top: -22px;
@@ -951,9 +953,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3vw;
+  z-index: 1;
   @include media($wide) {
     padding: 1vw;
-    z-index: 1;
   }
 }
 .no-people {
@@ -965,19 +967,22 @@ body {
     flex-basis: 60%;
     padding: 2vw;
   }
-  .big-sub {
+  & .first-par {
+    margin-top: 4vw;
+  }
+  & .big-sub {
     font-size: $bigSub;
   }
-  .small {
+  & .small {
     font-weight: $regular;
   }
-  .italic {
+  & .italic {
     font-style: italic;
   }
-  .big-bold {
+  & .big-bold {
     font-weight: 900;
   }
-  .indent {
+  & .indent {
     padding-left: 2vw;
   }
   & ul {
@@ -1030,12 +1035,7 @@ body {
 .project-par {
   @include paragraph-font;
   margin-top: 1vw;
-  &.first-par {
-    margin-top: 7vw;
-    @include media($wide) {
-      margin-top: 4vw;
-    }
-  }
+
   & a {
     // @include join-button-span-hover;
     font-weight: bold;

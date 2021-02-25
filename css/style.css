@@ -1211,6 +1211,11 @@ body {
   background-repeat: no-repeat;
 }
 
+.card .card-projects .csr-project.filtered {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .card .card-projects .csr-project .project-title {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1238,7 +1243,7 @@ body {
 }
 
 .card .card-projects .csr-project .project-title .project-title-text:before {
-  content: "Project";
+  content: "Get involved";
   display: block;
   position: absolute;
   top: -22px;
@@ -1834,12 +1839,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 3vw;
+  z-index: 1;
 }
 
 @media (min-width: 1025px) {
   .join-button-wrapper {
     padding: 1vw;
-    z-index: 1;
   }
 }
 
@@ -1857,6 +1862,10 @@ body {
         flex-basis: 60%;
     padding: 2vw;
   }
+}
+
+.project-left .first-par {
+  margin-top: 4vw;
 }
 
 .project-left .big-sub {
@@ -1953,16 +1962,6 @@ body {
   color: #161616;
   line-height: 1.5;
   margin-top: 1vw;
-}
-
-.project-par.first-par {
-  margin-top: 7vw;
-}
-
-@media (min-width: 1025px) {
-  .project-par.first-par {
-    margin-top: 4vw;
-  }
 }
 
 .project-par a {

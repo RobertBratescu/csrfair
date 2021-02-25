@@ -99,6 +99,14 @@ $(document).ready(function () {
     $(".return-button").removeClass("go-down");
   });
 
+  //HOVER A PROJECT
+  $(".csr-project").mouseover(function () {
+    $(this).siblings().addClass("filtered");
+  });
+  $(".csr-project").mouseout(function () {
+    $(".csr-project").removeClass("filtered");
+  });
+
   //   CLICK RETURN
   $(".return-button").click(function () {
     $(".csr-intro").removeClass("has-left hide");
