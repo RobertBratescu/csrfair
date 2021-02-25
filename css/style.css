@@ -1098,6 +1098,19 @@ body {
   cursor: pointer;
 }
 
+.card .card-description .description-wrapper li {
+  font-size: min(max(15px, 1vw), 15px);
+  font-weight: 400;
+  color: #161616;
+  line-height: 1.5;
+  list-style-type: disc;
+  margin-top: 5px;
+}
+
+.card .card-description .description-wrapper ul {
+  padding-left: 2em;
+}
+
 .card .card-description .description-wrapper p {
   font-size: min(max(15px, 1vw), 15px);
   color: #161616;
@@ -1861,11 +1874,12 @@ body {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
     padding: 2vw;
+    padding-right: 2.5vw;
   }
 }
 
 .project-left .first-par {
-  margin-top: 4vw;
+  margin-top: 3em;
 }
 
 .project-left .big-sub {
@@ -1890,6 +1904,10 @@ body {
 
 .project-left ul.indent {
   padding-left: 4em;
+}
+
+.project-left ul.small-indent {
+  padding-left: 3em;
 }
 
 .project-left ul li {
@@ -2074,6 +2092,18 @@ body {
   background-image: url(../img/edu-map.png);
 }
 
+.project-page[data-tab="project31"] .project-hero-image {
+  background-image: url(../img/learn.png);
+}
+
+.project-page[data-tab="project32"] .project-hero-image {
+  background-image: url(../img/brighter.png);
+}
+
+.project-page[data-tab="project33"] .project-hero-image {
+  background-image: url(../img/reliance.png);
+}
+
 .csr-project[data-tab="project11"] {
   background-image: url(../img/leadership.png);
 }
@@ -2092,6 +2122,18 @@ body {
 
 .csr-project[data-tab="project23"] {
   background-image: url(../img/edu-map.png);
+}
+
+.csr-project[data-tab="project31"] {
+  background-image: url(../img/learn.png);
+}
+
+.csr-project[data-tab="project32"] {
+  background-image: url(../img/brighter.png);
+}
+
+.csr-project[data-tab="project33"] {
+  background-image: url(../img/reliance.png);
 }
 
 /* --- FOOTER --- */

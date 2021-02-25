@@ -155,6 +155,15 @@ $button-back-color: rgba(255, 255, 255, 0.35);
 @mixin project23-background {
   background-image: url(../img/edu-map.png);
 }
+@mixin project31-background {
+  background-image: url(../img/learn.png);
+}
+@mixin project32-background {
+  background-image: url(../img/brighter.png);
+}
+@mixin project33-background {
+  background-image: url(../img/reliance.png);
+}
 
 //JOIN BUTTON
 @mixin join-button {

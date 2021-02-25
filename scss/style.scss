@@ -451,6 +451,14 @@ body {
           cursor: pointer;
         }
       }
+      & li {
+        @include paragraph-font;
+        list-style-type: disc;
+        margin-top: 5px;
+      }
+      & ul {
+        padding-left: 2em;
+      }
       & p {
         font-size: $parFont;
         color: $newBlack;
@@ -966,9 +974,10 @@ body {
   @include media($wide) {
     flex-basis: 60%;
     padding: 2vw;
+    padding-right: 2.5vw;
   }
   & .first-par {
-    margin-top: 4vw;
+    margin-top: 3em;
   }
   & .big-sub {
     font-size: $bigSub;
@@ -988,6 +997,9 @@ body {
   & ul {
     &.indent {
       padding-left: 4em;
+    }
+    &.small-indent {
+      padding-left: 3em;
     }
     & li {
       @include paragraph-font;
@@ -1115,6 +1127,15 @@ body {
   &[data-tab="project23"] .project-hero-image {
     @include project23-background;
   }
+  &[data-tab="project31"] .project-hero-image {
+    @include project31-background;
+  }
+  &[data-tab="project32"] .project-hero-image {
+    @include project32-background;
+  }
+  &[data-tab="project33"] .project-hero-image {
+    @include project33-background;
+  }
 }
 .csr-project {
   &[data-tab="project11"] {
@@ -1131,6 +1152,15 @@ body {
   }
   &[data-tab="project23"] {
     @include project23-background;
+  }
+  &[data-tab="project31"] {
+    @include project31-background;
+  }
+  &[data-tab="project32"] {
+    @include project32-background;
+  }
+  &[data-tab="project33"] {
+    @include project33-background;
   }
 }
 
