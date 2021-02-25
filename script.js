@@ -77,8 +77,8 @@ $(document).ready(function () {
     $(".csr-projects-section").addClass("has-left");
     // $(".csr-cards-wrapper").addClass("hide");
 
-    $(".card").removeClass("open");
-    $(".card").removeClass("lower");
+    // $(".card").removeClass("open");
+    // $(".card").removeClass("lower");
 
     // if ($(window).width() > 1024) {
     //   $([document.documentElement, document.body]).animate(
@@ -107,14 +107,22 @@ $(document).ready(function () {
     $(".csr-project").removeClass("clicked");
     $(".project-page").addClass("hide");
     // $(".csr-cards-wrapper").removeClass("hide");
-    $(".csr-intro-title, .csr-intro-description").removeClass("go-up");
-
-    $([document.documentElement, document.body]).animate(
-      {
-        scrollTop: $(".csr-mid").offset().top - 150,
-      },
-      600
-    );
+    // $(".csr-intro-title, .csr-intro-description").removeClass("go-up");
+    if ($(window).width() > 1024) {
+      $([document.documentElement, document.body]).animate(
+        {
+          scrollTop: $(".csr-mid").offset().top - 150,
+        },
+        600
+      );
+    } else {
+      $([document.documentElement, document.body]).animate(
+        {
+          scrollTop: $(".card.open").offset().top - 50,
+        },
+        600
+      );
+    }
   });
 
   //PROJECT PAGE TITLE
@@ -123,4 +131,22 @@ $(document).ready(function () {
     var getProjectName = $(".csr-project[data-tab='" + getData + "'] .project-title-text").html();
     $(this).html(getProjectName);
   });
+
+  //OPEN DESCRIPTION IMAGES
+  $(".description-wrapper img.stat").click(function () {
+    var getSrc = $(this).attr("src");
+    window.open(getSrc, "_blank").focus();
+  });
+
+  //STICKY JOIN BUTTON
+  //   var stickyTop = $(".sticky").offset().top;
+
+  //   $(window).scroll(function () {
+  //     var windowTop = $(window).scrollTop();
+  //     if (stickyTop < windowTop && $(".blue").height() + $(".blue").offset().top - $(".sticky").height() > windowTop) {
+  //       $(".sticky").css("position", "fixed");
+  //     } else {
+  //       $(".sticky").css("position", "relative");
+  //     }
+  //   });
 });

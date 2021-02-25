@@ -26,6 +26,7 @@ $h5Font: #{"min(max(#{18px}, #{2vw}), #{19px})"};
 $mailFont: #{"min(max(#{20px}, #{2vw}), #{15px})"};
 $parFont: #{"min(max(#{15px}, #{1vw}), #{15px})"};
 
+$bigSub: #{"min(max(#{20px}, #{3vw}), #{23px})"};
 $card-title-font: #{"min(max(#{19px}, #{3vw}), #{30px})"};
 
 @mixin h1-font {
@@ -144,6 +145,15 @@ $button-back-color: rgba(255, 255, 255, 0.35);
 }
 @mixin project12-background {
   background-image: url(/img/edu.png);
+}
+@mixin project21-background {
+  background-image: url(/img/crowd.png);
+}
+@mixin project22-background {
+  background-image: url(/img/partnership.png);
+}
+@mixin project23-background {
+  background-image: url(/img/edu-map.png);
 }
 
 //JOIN BUTTON
